@@ -2,7 +2,6 @@ import { Navbar } from "flowbite-react";
 import { TbSearch } from "react-icons/tb";
 import { IoMdHome } from "react-icons/io";
 import { IoPerson } from "react-icons/io5";
-import nav from "../assets/tv.jpg";
 import "../index.css";
 
 function Nabar() {
