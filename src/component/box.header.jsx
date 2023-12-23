@@ -25,7 +25,7 @@ const Boxheader = () => {
         the target of hit men and women everywhere.
       </p>
 
-      <Button className=" text-white mt-4 ml-10">
+      <Button className=" text-white mt-4 ml-10" color="failure">
         <img src="icon.png" alt="icon" /> WATCH TRAILER
       </Button>
     </div>
