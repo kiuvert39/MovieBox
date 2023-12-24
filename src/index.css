@@ -1,8 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-body {
+*{
     margin: 0; 
     padding: 0; 
 }
@@ -42,6 +41,9 @@ input::placeholder{
   }
   .background-image{
     height: 650px;
+  }
+  .card{
+    width: 260px;
   }
  
 }

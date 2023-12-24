@@ -1,22 +1,22 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import MovieCard from "./MovieCard";
 
 function Newarrival() {
-  const [movies, setMovies] = useState([])
+  const [movies, setMovies] = useState([]);
 
-  useEffect(() =>{
-    const fetchdate = async() =>{
+  useEffect(() => {
+    const fetchdate = async () => {
       try {
-        const response = await fetch('http://localhost:5000/movies');
+        const response = await fetch("http://localhost:5000/movies");
         const jsonData = await response.json();
         setMovies(jsonData);
       } catch (error) {
-        console.error('Error fetching movie data:', error);
+        console.error("Error fetching movie data:", error);
       }
-    }
+    };
     fetchdate();
-  },[])
+  }, []);
   return (
     <>
       <section className=" flex space-x-28 justify-center md:mt-5 items-center md:space-x-5">
@@ -27,19 +27,24 @@ function Newarrival() {
           <a href="/home">see more</a> <IoIosArrowForward />
         </h4>
       </section>
-      {
-        movies.map((movie) =>{
-        return <MovieCard
-         poster = {movie.poster}
-         status= {movie.status}
-         rating ={movie.rating}
-         type = {movie.type}
-         icon1 ={movie.icon1}
-         title ={movie.title}         
-         />
-        })
-      }
-      
+      <div   className="grid lg:grid-cols-4 lg:ml-24 lg:mr-24 mt-16 lg:gap-y-16">
+        {movies.map((movie) => {
+          return (
+            <div>
+              <MovieCard
+              
+                key={movie.id}
+                poster={movie.poster}
+                status={movie.status}
+                rating={movie.rating}
+                type={movie.type}
+                icon1={movie.icon1}
+                title={movie.title}
+              />
+            </div>
+          );
+        })}
+      </div>
     </>
   );
 }

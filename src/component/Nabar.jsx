@@ -6,7 +6,7 @@ import "../index.css";
 
 function Nabar() {
   return (
-    <Navbar fluid rounded className="bg-opacity-10">
+    <Navbar fluid rounded className="bg-opacity-10 fixed top-0 bg-black md:w-full md:mb-16">
       <Navbar.Brand
         href="https://flowbite-react.com"
         className="w-44 h-10 gap-8 md:ms-24"
