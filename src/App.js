@@ -2,14 +2,17 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './Home'
 import Nabar from './component/Nabar';
+import Movies from './movies';
 
 function App() {
   return (
     <>
     <Router >
-    {/* <Nabar/> */}
+    <Nabar/> 
         <Routes>
             <Route path='/' element={<Home/>}  />
+            <Route path='/movies' element={<Movies/>}  />
+
         </Routes>
     </Router>
     

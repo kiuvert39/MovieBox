@@ -1,14 +1,27 @@
 import React from "react";
 
-function MovieCard({ poster, status, rating, type, icon1, title }) {
+
+function MovieCard({
+  poster,
+  status,
+  rating,
+  type,
+  icon1,
+  title,
+  selectMovie,
+  movie,
+}) {
   return (
     <>
-      <div className="m-1 card font-sans md:max-w-xs w-68  ">
+      <div
+        className="m-1 card font-sans md:max-w-xs w-68  "
+        onClick={() => selectMovie(movie)}
+      >
         <img src={poster} alt="poster" className=" md:w-80 w-56 " />
         <p className="font-sans leading-4 text-gray-400 text-ms pt-2">
           {status}
         </p>
-        <h2 className="font-sans leading-6 text-lg text-gray-900 w-96 pt-2 ">
+        <h2 className="font-sans leading-6 text-lg text-gray-900 w-64 pt-2 max-w-6 ">
           {title}
         </h2>
         <div className="flex space-x-52 md:space-x-40 pt-3 text-gray-900 flex-row font-sans md:max-w-xl">
