@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Movies() {
+function Movies(props) {
   return (
-    <div>Movies</div>
+    <div>{props.title}</div>
   )
 }
 
