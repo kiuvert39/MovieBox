@@ -1,11 +1,20 @@
 import { Button } from "flowbite-react";
 import React from "react";
 
-const Boxheader = () => {
-  return (
-    <div className=" justify-start w-4/5 max-w-md ml-7 md:ml-40 md:mt-16  h-80 max-h-80">
+const Boxheader = ({
+  poster,
+  status,
+  rating,
+  type,
+  icon1,
+  title,
+  selectMovie,
+  movie,
+}) => {
+  return (<div>
+    <div className=" justify-start w-4/5 max-w-md ml-7 md:ml-40 md:mt-1  h-80 max-h-80" >
       <div className=" max-w-xs w-4/5 md:w-screen md:max-w-lg pt-3 pl-10 pb-2">
-        <h1 className=" text-white md:text-6xl text-2xl">
+        <h1 className=" text-white md:text-6xl md:mt-36 mt-56 text-2xl">
           John Wick 3: Parabellum
         </h1>
       </div>
@@ -25,9 +34,10 @@ const Boxheader = () => {
         the target of hit men and women everywhere.
       </p>
 
-      <Button className=" text-white mt-4 ml-10">
+      <Button className=" text-white mt-4 ml-10" color="failure">
         <img src="icon.png" alt="icon" /> WATCH TRAILER
       </Button>
+    </div>
     </div>
   );
 };

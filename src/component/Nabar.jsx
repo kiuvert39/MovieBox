@@ -3,10 +3,21 @@ import { TbSearch } from "react-icons/tb";
 import { IoMdHome } from "react-icons/io";
 import { IoPerson } from "react-icons/io5";
 import "../index.css";
+import { useState } from "react";
+import SearchMovie from "./SearchMovie";
 
 function Nabar() {
+  //  const handleSearch = (e) =>{
+  //   e.preventDefault()
+  //   fetchPopular()
+  //  }
+
   return (
-    <Navbar fluid rounded className="bg-opacity-10">
+    <Navbar
+      fluid
+      rounded
+      className="bg-opacity-10 fixed top-0 bg-black md:w-full md:mb-16"
+    >
       <Navbar.Brand
         href="https://flowbite-react.com"
         className="w-44 h-10 gap-8 md:ms-24"
@@ -17,11 +28,6 @@ function Nabar() {
         </span>
       </Navbar.Brand>
       <div className="search-container">
-        <input
-          className=" input bg-gray-50  bg-opacity-30 text-white  rounded-lg border-2"
-          placeholder="What do you want to watch"
-        />
-
         <TbSearch
           style={{
             osition: "absolute",
