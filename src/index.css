@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 *{
     margin: 0; 
     padding: 0; 
@@ -38,6 +40,7 @@
   .input{
    width: 500px;
    padding-left: 100px;
+   
   }
   .background-image{
     height: 650px;
@@ -46,4 +49,40 @@
     width: 260px;
   }
  
+}
+
+.movie-title{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 23px;
+  line-height: 24.5px;
+  max-width: 420px;
+}
+
+.release_date,.movie_language{
+  font-family: 'Poppins', sans-serif;
+  font-weight:400;
+  font-size: 16px;
+  color: rgb(124, 80, 80);
+  padding-top: 8px
+}
+
+.movie_overview{
+ font-family: 'Poppins', sans-serif;
+  line-height: 20px;
+  font-size: 16px;
+  max-width: 774px;
+  max-height: 210px;
+   position: relative;
+  left: 141px;
+  color: #333333;
+  text-align: justify;
+  margin-top: 20px; 
+
+}
+.ratings{
+  font-family: 'Poppins', sans-serif;
+  font-weight:400;
+  font-size: 16px;
+  color: rgb(124, 80, 80);
 }

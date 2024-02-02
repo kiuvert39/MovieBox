@@ -61,7 +61,7 @@ function Newarrival() {
         {movies.map((movie) => {
           return (
             <div>
-              <Link to={`/movies/:${movie.id}`} element={<movie />}>
+             <Link to={`/movies/${movie.id}`} state={{ movie }}>
                 <MovieCard
                   key={movie.id}
                   poster={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
