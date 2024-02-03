@@ -7,7 +7,6 @@ function Header() {
   return (
     <>
       <div className="background-image">
-        <Nabar />
         <Boxheader />
       </div>
     </>

@@ -3,6 +3,7 @@ import { Button } from "flowbite-react";
 import { useLocation } from "react-router-dom";
 import YouTube from "react-youtube";
 import {FcLike, FcDownload } from 'react-icons/fc'
+import Sidebar from "./component/Sidebar";
 import "../src/index.css";
 
 function Movies() {
@@ -38,6 +39,8 @@ function Movies() {
   };
 
   return (
+    <>
+    <Sidebar/>
     <div
       style={{
         alignItems: "center",
@@ -84,6 +87,7 @@ function Movies() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 
