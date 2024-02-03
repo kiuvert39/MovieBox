@@ -85,6 +85,7 @@ function Newarrival() {
           >
             previous
           </Button>
+          {currentPage}
           <Button
             outline
             onClick={handleNextPage}

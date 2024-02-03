@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import MovieCard from "./MovieCard";
+import { Link } from "react-router-dom";
 
 function SearchMovie() {
   const [search, setSearch] = useState();
   const [query, setQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
+  const [selectMovie, setSelectMovie] = useState({});
 
   const apiKey = "4144a92a014be96192b8e79b141493ea";
 
@@ -37,16 +39,19 @@ function SearchMovie() {
 
       <div className="grid lg:grid-cols-4 lg:ml-24 lg:mr-24 mt-16 lg:gap-y-16">
         {searchResults.map((movie) => (
-          <MovieCard
-            key={movie.id}
-            poster={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-            status={movie.status}
-            rating={movie.rating}
-            type={movie.type}
-            icon1={movie.icon1}
-            title={movie.title}
-            movie={movie}
-          />
+          <Link to={`/movies/${movie.id}`} state={{ movie }}>
+            <MovieCard
+              key={movie.id}
+              poster={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+              status={movie.status}
+              rating={movie.rating}
+              type={movie.type}
+              icon1={movie.icon1}
+              title={movie.title}
+              movie={movie}
+              selectMovie={setSelectMovie}
+            />
+          </Link>
         ))}
       </div>
     </div>
