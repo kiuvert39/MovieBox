@@ -1,0 +1,27 @@
+.sidebar {
+    position: fixed;
+    height: 100%;
+    width: 60px;
+    width: 200px;
+    background-color: #afaeae;
+    padding: 20px;
+    border-radius: 5px,;
+  }
+  
+  .sidebar-item {
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  .sidebar-item:hover {
+    background-color: #ce1b1b;
+    border-radius: 7px;
+    color: white;
+  }
+  
+  .selected {
+    background-color: #ce1b1b;
+    color: white;
+    border-radius: 7px;
+  }

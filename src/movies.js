@@ -40,49 +40,51 @@ function Movies() {
 
   return (
     <>
-    <Sidebar/>
-    <div
-      style={{
-        alignItems: "center",
-        justifyContent: "center",
-        overflow: "hidden",
-        marginBottom: "80px"
-      }}
-    >
-      <YouTube
-        videoId="0vxOhd4qlnA"
+    <div className=" flex flex-row ">
+      <Sidebar/>
+      <div
         style={{
-          paddingBottom: "30px",
-          paddingTop: "80px",
-          paddingLeft: "140px",
+          alignItems: "center",
+          justifyContent: "center",
+          overflow: "hidden",
+          marginBottom: "80px",
+          marginLeft: "200px"
         }}
-        opts={opts}
-      />
-
-      <div>
-        <div
+      >
+        <YouTube
+          videoId="0vxOhd4qlnA"
           style={{
-            display: "flex",
-            justifyContent: "space-evenly",
-            position: "relative",
-            left: "-50px",
+            paddingBottom: "30px",
+            paddingLeft: "50px",
           }}
-        >
-          <h1 className="movie-title">{movie.title}</h1>
-          <p className="release_date"> Release date: { movie.release_date}</p>
-          <p className="movie_language"> language: {movie.original_language}</p>
-        </div>
-        <div className=" flex flex-row gap-80
-        ">
-          <p className="movie_overview">{movie.overview}</p>
-          <div className=" mt-5">
-            <p className=" flex-row flex gap-3 ratings"> Ratings: <FcLike size={24}/> {Math.round(movie.popularity)}K</p>
-            <Button className=" text-white mt-4 " color="failure">
-              <FcDownload 
-              
-              size={28}
-              />    DOWNLOAD
-            </Button>
+          opts={opts}
+        />
+
+        <div>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-evenly",
+              position: "relative",
+              left: "-125px",
+            }}
+          >
+            <h1 className="movie-title">{movie.title}</h1>
+            <p className="release_date"> Release date: { movie.release_date}</p>
+            <p className="movie_language"> language: {movie.original_language}</p>
+          </div>
+          <div className=" flex flex-row gap-80
+          ">
+            <p className="movie_overview">{movie.overview}</p>
+            <div className=" mt-5">
+              <p className=" flex-row flex gap-3 ratings"> Ratings: <FcLike size={24}/> {Math.round(movie.popularity)}K</p>
+              <Button className=" text-white mt-4 " color="failure">
+                <FcDownload 
+                
+                size={28}
+                />    DOWNLOAD
+              </Button>
+            </div>
           </div>
         </div>
       </div>
