@@ -66,7 +66,7 @@ function Movies() {
               display: "flex",
               justifyContent: "space-evenly",
               position: "relative",
-              left: "-125px",
+              left: "-70px",
             }}
           >
             <h1 className="movie-title">{movie.title}</h1>

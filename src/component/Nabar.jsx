@@ -16,7 +16,7 @@ function Nabar() {
     <Navbar
       fluid
       rounded
-      className="bg-opacity-10 fixed top-0 bg-black md:w-full md:mb-16"
+      className="bg-opacity-1 sticky sm:w-full top-0 bg-stone-900 md:w-full md:mb"
     >
       <Navbar.Brand
         href="https://flowbite-react.com"
@@ -26,20 +26,11 @@ function Nabar() {
         <span className="self-center whitespace-nowrap text-xl font-DM sana w-32  text-white leading-9">
           MovieBox
         </span>
+
       </Navbar.Brand>
+      
       <div className="search-container">
-        <TbSearch
-          style={{
-            osition: "absolute",
-            left: "90px",
-            top: "50%",
-            transform: "translateY(-130%)",
-            color: "white",
-            paddingLeft: "15px",
-          }}
-          size="30px"
-          color="white"
-        />
+      
       </div>
       <Navbar.Toggle />
       <Navbar.Collapse className=" md:mr-24">

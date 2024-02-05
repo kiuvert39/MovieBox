@@ -6,6 +6,7 @@
 *{
     margin: 0; 
     padding: 0; 
+    
 }
  .background-image{
     background-image: url('/public/images/Poster.png');
@@ -13,10 +14,10 @@
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
-    background-attachment: fixed;    
+       
     margin: 0;
     padding: 0;
-    width: 100%;
+    max-width: 100%;
 } 
 
 /* input::placeholder{
@@ -44,6 +45,7 @@
   }
   .background-image{
     height: 650px;
+    overflow: hidden;
   }
   .card{
     width: 260px;
@@ -85,4 +87,10 @@
   font-weight:400;
   font-size: 16px;
   color: rgb(124, 80, 80);
+}
+
+.input-width{
+  width: 500px;
+  font-size: large;
+  font-family: 'Poppins', sans-serif;
 }
