@@ -41,7 +41,10 @@ function Movies() {
   return (
     <>
     <div className=" flex flex-row ">
+      <div  class="hidden sm:block">
       <Sidebar/>
+      </div>
+      
       <div
         style={{
           alignItems: "center",
@@ -57,6 +60,7 @@ function Movies() {
             paddingBottom: "30px",
             paddingLeft: "50px",
           }}
+          className="sm:pl-0 sm:w-24 md:w-32 lg:w-48 xl:w-64"
           opts={opts}
         />
 

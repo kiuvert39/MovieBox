@@ -47,7 +47,7 @@ function Newarrival() {
 
   return (
     <>
-      <div className=" hidden">
+      <div>
       <SearchMovie />
       </div>
      
