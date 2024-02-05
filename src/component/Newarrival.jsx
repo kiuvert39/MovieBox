@@ -47,7 +47,10 @@ function Newarrival() {
 
   return (
     <>
+      <div>
       <SearchMovie />
+      </div>
+     
       <section className=" flex space-x-28 justify-center md:mt-5 items-center md:space-x-5">
         <h2 className="font-sans leading-10 max-w-3xl size-9 pl-2 text-black md:relative -left-1/3 md:text-2xl">
           Featured Movie
@@ -85,7 +88,10 @@ function Newarrival() {
           >
             previous
           </Button>
-          {currentPage}
+          <div className="">
+             {currentPage}
+          </div>
+          
           <Button
             outline
             onClick={handleNextPage}

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import MovieCard from "./MovieCard";
 import { Link } from "react-router-dom";
+import { FaSearch } from "react-icons/fa";
+import '../../src/index.css'
 
 function SearchMovie() {
   const [search, setSearch] = useState();
@@ -29,14 +31,17 @@ function SearchMovie() {
 
   return (
     <div>
-      <input
-        type="text"
-        placeholder="Search movies..."
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-      />
-      <button onClick={handleSearch}>Search</button>
-
+      <div   className=" mt-6 ml-96">
+          <input
+            type="text"
+            placeholder="Search movies..."
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            className=" rounded-xl input-width"
+          />
+          <button onClick={handleSearch} className=" ml-5"><FaSearch className=" pt-10" size={65}/></button>
+      </div>
+ 
       <div className="grid lg:grid-cols-4 lg:ml-24 lg:mr-24 mt-16 lg:gap-y-16">
         {searchResults.map((movie) => (
           <Link to={`/movies/${movie.id}`} state={{ movie }}>

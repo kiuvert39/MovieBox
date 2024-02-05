@@ -13,8 +13,8 @@ function Sidebar() {
 
 
   return (
-    <div className="sidebar">
-      <div>
+    <div className="sidebar bg-opacity-90">
+      <div className=' mt-6 mb-10'>
         <img src='/poster.png' alt="MovieBox" />
       </div>
       <div
