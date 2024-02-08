@@ -48,6 +48,7 @@ function Newarrival() {
   return (
     <>
       <div>
+      
       <SearchMovie />
       </div>
      
