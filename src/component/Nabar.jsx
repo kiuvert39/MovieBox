@@ -3,15 +3,9 @@ import { TbSearch } from "react-icons/tb";
 import { IoMdHome } from "react-icons/io";
 import { IoPerson } from "react-icons/io5";
 import "../index.css";
-import { useState } from "react";
-import SearchMovie from "./SearchMovie";
 
 function Nabar() {
-  //  const handleSearch = (e) =>{
-  //   e.preventDefault()
-  //   fetchPopular()
-  //  }
-
+ 
   return (
     <Navbar
       fluid

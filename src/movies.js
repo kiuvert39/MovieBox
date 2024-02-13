@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Button } from "flowbite-react";
 import { useLocation } from "react-router-dom";
 import YouTube from "react-youtube";
@@ -11,14 +11,14 @@ function Movies() {
   const movie = location.state.movie;
   const api_url =
     "https://api.themoviedb.org/3/movie/now_playing?api_key=4144a92a014be96192b8e79b141493ea";
-  const api_key = "4144a92a014be96192b8e79b141493ea";
+  
   const [playing, setPlaying] = useState(false);
   const [trailer, setTrailer] = useState(null);
   const [movies, setMovies] = useState([]);
 
   const fetchMovie = async (movies) => {
     const movie = fetch(api_url);
-    console.log(movie);
+    // console.log(movie);
     if (movie.videos && movie.videos.results) {
       const trailer = movie.videos.results.find(
         (vid) => vid.name === "Official Trailer"

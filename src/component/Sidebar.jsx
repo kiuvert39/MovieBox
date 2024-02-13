@@ -1,15 +1,12 @@
-import Reactm,{useState} from 'react'
+import React,{useState} from 'react'
 import '../style/stylebar.style.css'
 
 
 function Sidebar() {
     const [selectedItem, setSelectedItem] = useState(null);
-
-
-  const handleItemClick = (item) => {
-    setSelectedItem(item);
-  };
-
+    const handleItemClick = (item) => {
+      setSelectedItem(item);
+    };
 
 
   return (

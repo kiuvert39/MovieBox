@@ -2,9 +2,7 @@ import React, { useState, useEffect } from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import MovieCard from "./MovieCard";
 import { Button } from "flowbite-react";
-import Boxheader from "./box.header";
 import { Link } from "react-router-dom";
-import Movies from "../movies";
 import SearchMovie from "./SearchMovie";
 
 function Newarrival() {
@@ -12,22 +10,20 @@ function Newarrival() {
   const [currentPage, setCurrentPage] = useState(1);
   const [selectMovie, setSelectMovie] = useState({});
   const movieArray = [];
-  let base_image_url = "https://image.tmdb.org/t/p/original";
-
   const url = `https://api.themoviedb.org/3/movie/now_playing?api_key=4144a92a014be96192b8e79b141493ea&language=en-US&page=${currentPage}`;
 
   const fetchPopular = async () => {
     const data = await fetch(url);
     const movies = await data.json();
+
     setSelectMovie(movies.results[0]);
     setMovies(movies.results);
     const movieId = movies.results.map((movie) => {
       const array = movie.id;
-      // console.log(movie.id);
+       console.log(movie.id);
       console.log(array);
       movieArray.push(array);
     });
-
     window.scrollTo(0, 0);
   };
   console.log(movies);
@@ -65,7 +61,7 @@ function Newarrival() {
         {movies.map((movie) => {
           return (
             <div>
-             <Link to={`/movies/${movie.id}`} state={{ movie }}>
+             <Link to={`/${movie.id}`} state={{ movie }}>
                 <MovieCard
                   key={movie.id}
                   poster={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
@@ -101,14 +97,6 @@ function Newarrival() {
             Next
           </Button>
         </div>
-        {/* <div style={{background: `url(https://image.tmdb.org/t/p/w500${selectMovie.backdrop_path})`}}></div>
-        
-        <div className="" >
-           <Button>play Trailer</Button> 
-          {selectMovie.title}
-          {selectMovie.overview}
-          
-        </div> */}
       </div>
     </>
   );
